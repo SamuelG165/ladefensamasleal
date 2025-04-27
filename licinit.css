@@ -1,0 +1,926 @@
+/*---------------------------- INICIO DE LOS ESTILOS GENERALES ----------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*---------------------------- FIN DE LOS ESTILOS GENERALES ----------------------------*/
+
+
+/*---------------------------- INICIO DE LOS ESTILOS DE LA CABEZA DE LA PAGINA ----------------------------*/
+
+header{
+    width: 100%;
+    height: 80vh;
+    background: url("imglic/ciuFond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.cont__nav{
+    width: 100%;
+    height: 10vh;
+    background: #2B2F3A;
+    position: fixed;
+    z-index: 20;
+}
+
+.menu__ham img{
+    margin: 1em 0.8em 0 0;
+    width: 40px;
+    position: fixed;
+    right: 0;
+    z-index: 30;
+}
+
+.menu__ham img:hover{
+    cursor: pointer;
+}
+
+.nav__title{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+}
+
+h1{
+    margin-left: 0.5em;
+    font-size: 1.4em;
+    font-family: Roboto;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-decoration: overline;
+    color: azure;
+}
+
+.nav{
+    width: 100%;
+    height: 0;
+    background: #2B2F3A;
+    display: flex;
+    align-items: end;
+    position: fixed;
+    top: -100px;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+}
+
+.nav__list{
+    padding: 0 1em 1em 1em;
+    width: 100%;
+}
+
+.list__item{
+    list-style: none;
+}
+
+.list__item a{
+    font-family: Montserrat;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.list__item div{
+    margin-bottom: 1em;
+    padding-bottom: 0.4em;
+    font-size: 1.05em;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 0.2em;
+    border-bottom: 2px solid white;
+    transition: 0.2s ease-in-out;
+}
+
+.list__item div:hover{
+    border-bottom: 2px solid #31d9d1;
+    color: #31d9d1;
+    transition-duration: 0.4s;
+}
+
+.active.nav{
+    opacity: 1;
+    visibility: visible;
+    height: 40vh;
+    top: 0;
+    transition-duration: 0.8s;
+}
+
+.header__title {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1em;
+}
+
+.header__title h2 {
+    font-size: 1.4em;
+    font-family: Montserrat;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    background-color: rgba(43, 47, 58, 0.7);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+.header__title p {
+    font-family: Montserrat;
+    font-weight: 200;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.header__title p span#cam {
+    display: inline-block;
+    background-color: rgba(43, 47, 58, 0.7);
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    min-height: 1.5em;
+    min-width: 200px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/*---------------------------- FIN DE LOS ESTILOS DE LA CABEZA DE LA PAGINA ----------------------------*/
+
+
+/*---------------------------- INICIO DE LOS ESTILOS DEL CUERPO DE LA PAGINA ----------------------------*/
+
+main{
+    width: 100%;
+}
+/* SECCIÓN DE SERVICIOS - ESTILO EJECUTIVO */
+.section__serv {
+    width: 100%;
+    padding: 4em 2em;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.section__serv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #396659, #31d9d1);
+}
+
+.serv__sub {
+    margin-bottom: 1em;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-wrap: pretty;
+    flex: 1 1 400px;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+}
+
+.serv__sub h3 {
+    margin-bottom: 1em;
+    font-size: 1.8rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+    position: relative;
+    display: inline-block;
+}
+
+.serv__sub h3::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: #31d9d1;
+}
+
+.serv__sub p {
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+.serv__sub img {
+    width: 100%;
+    border-radius: 0.5em;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    object-fit: cover;
+    height: 400px;
+}
+
+.serv__sub img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.sub--bor {
+    padding: 2em;
+    border: none;
+    background: rgba(43, 47, 58, 0.6);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+.sub--bor:hover {
+    background: rgba(43, 47, 58, 0.8);
+    transform: translateY(-3px);
+}
+
+/* Efecto de líneas decorativas */
+.serv__sub::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    width: 50px;
+    height: 50px;
+    border-top: 2px solid #31d9d1;
+    border-left: 2px solid #31d9d1;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.serv__sub::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    border-bottom: 2px solid #31d9d1;
+    border-right: 2px solid #31d9d1;
+    opacity: 0.5;
+    transition: all 0.5s ease;
+}
+
+.serv__sub:hover::before,
+.serv__sub:hover::after {
+    width: 70px;
+    height: 70px;
+    opacity: 0.8;
+}
+
+
+/* ESTILOS DE LA SECCION DE CASOS DE EXITO */
+
+.section__exitos{
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(rgba(43, 47, 58, 0.3), rgba(43, 47, 58, 0.6)), url("imglic/exito__fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.exitos__title{
+    padding: 2em;
+    width: 100%;
+    font-family: Montserrat;
+    font-weight: 100;
+    text-align: center;
+    text-shadow: 2px 2px #2C2C2C;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.exitos__title h3{
+    border: none;
+    font-family: Roboto;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+.cont__h3{
+    width: 100%;
+    margin-bottom: 0.5em;
+    padding: 0.4em;
+    border: none;
+    border-bottom: 2px solid white;
+
+}
+
+.exitos__title p{
+    font-size: 1.2em;
+    text-wrap: balance;
+    line-height: 1.4em;
+}
+/* SECCIÓN DE CONTACTO - ESTILOS PROFESIONALES */
+.section__contac {
+    width: 100%;
+    padding: 3em 2em;
+    font-family: 'Montserrat', sans-serif;
+    background: #1A2A3A;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2em;
+    color: #F5F5F5;
+}
+
+.contac__gen {
+    flex: 1 1 350px;
+    max-width: 500px;
+}
+
+.gen--font {
+    padding: 2em;
+    background: #FFFFFF;
+    border-radius: 8px 8px 0 0;
+    color: #333333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gen--font h3 {
+    margin-bottom: 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #1A2A3A;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #396659;
+    padding-bottom: 0.5em;
+}
+
+.gen--font p {
+    margin-bottom: 1.5em;
+    line-height: 1.6;
+    font-size: 1em;
+    color: #555555;
+}
+
+.contacttButton {
+    width: 100%;
+    margin: 2em 0;
+    text-align: center;
+}
+
+.contactMas {
+    background-color: #396659;
+    text-transform: uppercase;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16em;
+    height: 3.5em;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contactMas::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #1A2A3A;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    z-index: 1;
+    transition: .3s ease-in-out all;
+}
+
+.contactMas > span {
+    color: white;
+    font-size: 1.1em;
+    position: relative;
+    z-index: 10;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.contactMas:hover::after {
+    top: 0;
+}
+
+.contactMas:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.gen--font h4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    margin: 2em 0 1em;
+    text-transform: capitalize;
+    color: #1A2A3A;
+}
+
+.contac__gen img {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.list__redes {
+    display: flex;
+    gap: 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 1.5em 0;
+}
+
+.redes__item a > img {
+    width: 32px;
+    transition: transform 0.3s ease;
+    filter: grayscale(30%);
+}
+
+.redes__item a:hover > img {
+    transform: translateY(-3px);
+    filter: grayscale(0%);
+}
+
+/* SECCIÓN INFORMACIÓN ADICIONAL - ESTILOS PROFESIONALES */
+aside {
+    padding: 3em 2em;
+    background: #1A2A3A;
+    color: #F5F5F5;
+}
+
+.extra__cont {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.lic {
+    flex: 1 1 350px;
+    max-width: 500px;
+}
+
+.lic__info h3 {
+    margin: 1.5em 0 1em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #FFFFFF;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #396659;
+    padding-bottom: 0.5em;
+}
+
+.lic__info p {
+    margin-bottom: 1.5em;
+    line-height: 1.7;
+    color: #DDDDDD;
+    font-size: 1em;
+}
+
+.unam img {
+    width: 120px;
+    margin-bottom: 1.5em;
+}
+
+.lic--img img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* EFECTOS DE TRANSICIÓN PARA PROFESIONALISMO */
+.contac__gen, .lic {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contac__gen:hover, .lic:hover {
+    transform: translateY(-5px);
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 768px) {
+    .section__contac, .extra__cont {
+        padding: 2em 1em;
+    }
+    
+    .gen--font, .lic__info {
+        padding: 1.5em;
+    }
+    
+    .contactMas {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+/*---------------------------- FIN DEL DISEÑO DEL CONTENIDO EXTRA DE LA PAGINA -------------------------------*/
+
+
+/*---------------------------- INICIO DEL DISEÑO DEL PIE DE PAGINA -------------------------------*/
+footer {
+    padding: 4em 2em;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #F8F8F8;
+    background: #0D1A1A;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fot__item {
+    flex: 1 1 250px;
+    padding: 0 1.5em;
+    margin-bottom: 2em;
+    min-width: 250px;
+}
+
+.fot__item h4 {
+    margin: 0 0 1.5em 0;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    font-size: 1.1em;
+    position: relative;
+    padding-bottom: 0.8em;
+}
+
+.fot__item h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #396659;
+}
+
+.legal__list, .social__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.legal__list li, .social__list li {
+    margin-bottom: 1em;
+    position: relative;
+    padding-left: 1.2em;
+}
+
+.legal__list li::before, .social__list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #396659;
+    font-weight: bold;
+}
+
+.legal__list a, .social__list a {
+    text-decoration: none;
+    color: #C8C8C8;
+    font-weight: 300;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+}
+
+.legal__list a:hover, .social__list a:hover {
+    color: #FFFFFF;
+    transform: translateX(5px);
+    text-decoration: none;
+}
+
+.item--tam p {
+    font-style: italic;
+    color: #AAAAAA;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-top: 2em;
+    border-left: 2px solid #396659;
+    padding-left: 1em;
+}
+
+.cont__social {
+    display: block;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    footer {
+        padding: 3em 1.5em;
+        flex-direction: column;
+    }
+    
+    .fot__item {
+        padding: 0;
+        margin-bottom: 2.5em;
+    }
+    
+    .fot__item h4 {
+        margin-bottom: 1em;
+    }
+}
+
+/* Efectos adicionales para elegancia */
+footer {
+    background: linear-gradient(135deg, #0D1A1A 0%, #122620 100%);
+}
+
+.fot__item {
+    transition: transform 0.3s ease;
+}
+
+.fot__item:hover {
+    transform: translateY(-3px);
+}
+/*---------------------------- FIN DEL DISEÑO DEL PIE DE PAGINA -------------------------------*/
+
+
+/*---------------------------- INICIO DEL DISEÑO RESPONSIVO ----------------------------*/
+
+@media screen and (min-width: 425px) {
+    .header__title h2{
+        font-size: 1.6em;
+    }
+
+    .header__title p{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header__title h2{
+        font-size: 1.8em;
+    }
+
+    .header__title p{
+        font-size: 1.4em;
+    }
+
+    .section__serv{
+        justify-content: space-evenly;
+    }
+
+    .serv__sub{
+        width: 40vw;
+        flex: none;
+    }
+
+    .sub--bor{
+        padding: 0 1em 0 0;
+        border: none;
+        border-bottom: none;
+        border-right: 2px solid white;
+    }
+    
+    .cont__h3{
+        width: 50%;
+    }
+
+    .gen--imglic img{
+        width: 100%;
+        height: 50vh;
+        object-fit: cover;
+        border-radius: 0 1em 1em 0;
+    }
+
+    .gen--font{
+        height: 50vh;
+        border-radius: 1em 0 0 1em;
+    }
+
+    .extra__cont{
+        width: 100%;
+        font-family: Montserrat;
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        flex-wrap: wrap;
+    }
+
+    .lic{
+        flex: none;
+    }
+
+    .lic__info p{
+        width: 40vw;
+    }
+
+    .lic--img img{
+        width: 100%;
+        height: 60vh;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    header{
+        height: 100vh;
+    }
+
+    .menu__ham img{
+        display: none;
+    }
+    
+    h1{
+        margin-left: 1em;
+    }
+    
+    .nav{
+        margin-top: 1.5em;
+        width: 100%;
+        background: none;
+        display: flex;
+        align-items: start;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        opacity: 1;
+        visibility: visible;
+        z-index: 20;
+    }
+    
+    .nav__list{
+        margin-right: 1em;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .serv__sub{
+        font-size: 1.1em;
+    }
+
+    .serv__sub h3{
+        font-size: 1.4em;
+    }
+
+    .serv__sub img{
+        width: 30vw;
+        margin-left: 1em;
+    }
+
+    .exitos__title h3{
+        font-size: 1.8em;
+    }
+    
+    .exitos__title p{
+        font-size: 1.4em;
+    }
+
+    .contac__gen{
+        flex: none;
+    }
+
+    .gen--font{
+        width: 35vw;
+        height: 50vh;
+        border-radius: 1em 0 0 1em;
+    }
+
+    .gen--imglic img{
+        width: 35vw;
+        height: 50vh;
+        object-fit: cover;
+        border-radius: 0 1em 1em 0;
+    }
+
+    .extra__cont{
+        gap: 1.5em;
+    }
+
+    .lic__info h3{
+        font-size: 1.2em;
+    }
+
+    .lic__info p{
+        width: 30vw;
+        font-size: 1em;
+        align-items: center;
+    }
+   
+    .lic--img img{
+        width: 100%;
+        height: 55vh;
+    }
+
+    .fot__item h4{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1448px) {
+    .header__title h2{
+        font-size: 2em;
+    }
+
+    .header__title p{
+        font-size: 1.6em;
+    }
+
+    .cont__h3{
+        width: 30%;
+    }
+
+    .gen--font{
+        width: 30vw;
+        height: 50vh;
+    }
+
+    .gen--font h3{
+        font-size: 1.4em;
+    }
+
+    .gen--font p{
+        font-size: 1.2em;
+    }
+
+    .gen--imglic img{
+        width: 30vw;
+        height: 50vh;
+        object-position: bottom;
+    }
+
+    footer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 4em;
+        flex-wrap: wrap;
+    }
+
+    .fot__item{
+        flex: none;
+    }
+    
+    .item--tam{
+        width: 35vw;
+    }
+    
+    .fot__item h4{
+        margin-top: 1em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+    }
+
+    .fot__item p{
+        font-size: 1.25em;
+    }
+}
+
+/*---------------------------- FIN DEL DISEÑO RESPONSIVO ----------------------------*/
+

@@ -1,0 +1,319 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*---------------------------- INICIO DE LOS ESTILOS DE LA CABEZA DE LA PAGINA ----------------------------*/
+
+header{
+    width: 100%;
+    height: 10vh;
+}
+
+.cont__nav{
+    width: 100%;
+    height: 10vh;
+    background: #2B2F3A;
+    position: fixed;
+    z-index: 20;
+}
+
+.menu__ham img{
+    margin: 1em 0.8em 0 0;
+    width: 40px;
+    position: fixed;
+    right: 0;
+    z-index: 30;
+}
+
+.menu__ham img:hover{
+    cursor: pointer;
+}
+
+.nav__title{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 20;
+}
+
+h1{
+    margin-left: 0.5em;
+    font-size: 1.4em;
+    font-family: Roboto;
+    font-weight: 100;
+    text-transform: uppercase;
+    text-decoration: overline;
+    color: azure;
+}
+
+.nav{
+    width: 100%;
+    height: 0;
+    background: #2B2F3A;
+    display: flex;
+    align-items: end;
+    position: fixed;
+    top: -100px;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s ease-in-out;
+}
+
+.nav__list{
+    padding: 0 1em 1em 1em;
+    width: 100%;
+}
+
+.list__item{
+    list-style: none;
+}
+
+.list__item a{
+    font-family: Montserrat;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.list__item div{
+    margin-bottom: 1em;
+    padding-bottom: 0.4em;
+    font-size: 1.05em;
+    text-transform: capitalize;
+    color: white;
+    border-radius: 0.2em;
+    border-bottom: 2px solid white;
+    transition: 0.2s ease-in-out;
+}
+
+.list__item div:hover{
+    border-bottom: 2px solid #31d9d1;
+    color: #31d9d1;
+    transition-duration: 0.4s;
+}
+
+.active.nav{
+    opacity: 1;
+    visibility: visible;
+    height: 40vh;
+    top: 0;
+    transition-duration: 0.8s;
+}
+
+.header__title{
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__title h2{
+    font-size: 1.4em;
+    font-family: Montserrat;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 2px 2px #2B2F3A;
+}
+
+.header__title p{
+    height: 20vh;
+    padding: 1em;
+    font-size: 1em;
+    font-family: Montserrat;
+    font-weight: 200;
+    text-align: center;
+    text-shadow: 2px 2px #2B2F3A;
+}
+
+/*---------------------------- FIN DE LOS ESTILOS DE LA CABEZA DE LA PAGINA ----------------------------*/
+
+
+main{
+    padding: 1em;
+}
+
+.podcast{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.pod__font img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/*---------------------------- INICIO DEL DISEÑO DEL PIE DE PAGINA -------------------------------*/
+
+footer{
+    padding: 2em;
+    width: 100%;
+    height: 100%;
+    font-family: Montserrat;
+    font-weight: 100;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    background: #122620;
+}
+
+.fot__item{
+    flex: 1 1 200px;
+}
+
+.fot__item h4{
+    margin-top: 1em;
+    margin-bottom: 0.4em;
+    text-transform: uppercase;
+}
+
+.legal__list{
+    list-style: none;
+    line-height: 1.8em;
+}
+
+.legal__list a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #C8C8C8;
+    transition: 0.3s ease-in-out;
+}
+
+.legal__list a:hover{
+    text-decoration: underline;
+    transition-duration: 0.6s;
+}
+
+.cont__social{
+    display: flex;
+    gap: 2em;
+}
+
+.cont__social a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: #C8C8C8;
+    transition: 0.3s ease-in-out;
+}
+
+.cont__social a:hover{
+    text-decoration: underline;
+    transition-duration: 0.6s;
+}
+
+.social__list{
+    list-style: none;
+    line-height: 2em;
+}
+
+/*---------------------------- FIN DEL DISEÑO DEL PIE DE PAGINA -------------------------------*/
+
+
+/*---------------------------- INICIO DEL DISEÑO RESPONSIVO ----------------------------*/
+
+@media screen and (min-width: 425px) {
+    .header__title h2{
+        font-size: 1.6em;
+    }
+
+    .header__title p{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .header__title h2{
+        font-size: 1.8em;
+    }
+
+    .header__title p{
+        font-size: 1.4em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .menu__ham img{
+        display: none;
+    }
+    
+    h1{
+        margin-left: 1em;
+    }
+    
+    .nav{
+        margin-top: 1.5em;
+        width: 100%;
+        background: none;
+        display: flex;
+        align-items: start;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        opacity: 1;
+        visibility: visible;
+        z-index: 20;
+    }
+    
+    .nav__list{
+        margin-right: 1em;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        gap: 1em;
+    }
+
+    .title h2{
+        font-size: 2.5em;
+    }
+
+}
+
+@media screen and (min-width: 1448px) {
+    .header__title h2{
+        font-size: 2em;
+    }
+
+    .header__title p{
+        font-size: 1.6em;
+    }
+
+    footer{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 4em;
+        flex-wrap: wrap;
+    }
+
+    .fot__item{
+        flex: none;
+    }
+    
+    .item--tam{
+        width: 35vw;
+    }
+    
+    .fot__item h4{
+        margin-top: 1em;
+        margin-bottom: 0.4em;
+        text-transform: uppercase;
+    }
+
+    .fot__item p{
+        font-size: 1.25em;
+    }
+}
+
+/*---------------------------- FIN DEL DISEÑO RESPONSIVO ----------------------------*/
